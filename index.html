@@ -6,7 +6,7 @@
     <script>
         function leapYear(){
             let jahr = document.getElementById("inp1").value;
-            if(jahr % 4 == 0 && jahr % 100 == 0 && jahr %400 == 0){
+            if(jahr % 4 == 0 && jahr % 100 != 0 || jahr %400 == 0){
                 document.getElementById("lbl").innerHTML = "Угадали. Високосный";
             }
             else{
