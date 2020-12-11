@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function leapYear(){
+            let jahr = document.getElementById("inp1").value;
+            if(jahr % 4 == 0 && jahr % 100 == 0 && jahr %400 == 0){
+                document.getElementById("lbl").innerHTML = "Угадали. Високосный";
+            }
+            else{
+                document.getElementById("lbl").innerHTML = "Не угадали. Не високосный";
+            }
+        }
+
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <label for="inp1">Хотите узнать какой год високосный, так введите этот год: </label>
+        <p><input type="text" id="inp1"></p>
+        <P><button onclick="leapYear()">Високосный ли?</button></P>
+        <p> <label for="lbl">В результате имеем:</label> </p>
+        <p><label id="lbl"></label></p>
+    </div>
+</body>
+</html>
